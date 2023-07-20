@@ -12,16 +12,29 @@ async function loadFlowers() {
     cardElement.className = 'card';
     
     const nameElement = document.createElement('span');
-    //nameElement.className = 'card-element title';
     nameElement.classList.add('card-element', 'title');
+    const infoElement = document.createElement('div'); 
+    const colorElement = document.createElement('span');
+    colorElement.classList.add('card-element', 'color');
+    const descriptionElement = document.createElement('span');
+    descriptionElement.classList.add('card-element', 'description');
+    const maxHeightElement = document.createElement('span');
+    maxHeightElement.classList.add('card-element', 'maxHeight');
     const imgElement = document.createElement('img');
     imgElement.classList = 'card-element';
 
     imgElement.src = image;
     nameElement.textContent = name;
-    cardElement.append(nameElement, imgElement);
+    colorElement.textContent = `color:`;
+    descriptionElement.textContent = `description:`;
+    maxHeightElement.textContent = `maxHeight:`;
+    
+   
+    infoElement.append(colorElement, ` ${color}`, document.createElement('br'), descriptionElement, ` ${description}`, document.createElement('br'), maxHeightElement, ` ${maxHeight}cm`);
+    cardElement.append(nameElement, imgElement, infoElement);
     flowersContainerElement.append(cardElement);
   });
 }
 
 loadFlowers();
+

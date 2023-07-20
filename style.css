@@ -1,6 +1,6 @@
 .flowers-container {
     background-color: rgb(178, 227, 214);
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -15,12 +15,28 @@
     gap: 30px;
   }
 
-  .card-element {
+   .card-element {
     padding: 10px;
-    font-size: 30px;
+    font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
-  }
+  } 
   
   .title {
     font-weight: bold;
+    color: forestgreen;
+    font-size: 25px;
   }
+
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .description, .maxHeight, .color {
+    font-size: 14px;
+    color: #979797;
+  }  
+
+  
